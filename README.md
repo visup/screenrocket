@@ -2,6 +2,8 @@
 
 A client library to use our screenshotting service
 
+[![Build Status](https://travis-ci.org/visup/screenrocket.svg)](https://travis-ci.org/visup/screenrocket)
+
 ## Installation
 
 Using Bower:
