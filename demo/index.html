@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>screenrocket demo</title>
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
+    <script src="./../vendor/jquery.js"></script>
+    <style>
+      /* begin demo embedded styles */
+
+      /* end demo embedded styles */
+    </style>
+  </head>
+  <body>
+    <h1>screenrocket demo</h1>
+
+    <!-- begin demo markup -->
+    <p>Click on this button to run the demo! <button id="demo-button">Run!</button></p>
+
+    <div id="demo-output"></div>
+    <!-- end demo markup -->
+
+    <p>See the <a href="http://visup.github.io/screenrocket">project homepage</a>.
+    <p>Check out the <a href="https://github.com/visup/screenrocket">project repo</a>.
+    <p>Copyright 2015 Visup S.r.l.</p>
+
+    <script src="./../dist/screenrocket.js"></script>
+
+    <script>
+      /* begin demo script */
+      $('#demo-button').click(function(e) {
+        e.preventDefault();
+
+        var screenrocket = Screenrocket({ apiKey: 'YOUR_API_KEY' });
+
+        screenrocket.render({ url: 'https://www.google.com' }).done(function(data) {
+          $('#demo-output').append('<img src="' + data.url + '">')
+        });
+      });
+      /* end demo script */
+    </script>
+  </body>
+</html>

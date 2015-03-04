@@ -1,0 +1,14 @@
+{
+  "name": "screenrocket",
+  "version": "0.0.1",
+  "main": "dist/screenrocket.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}
