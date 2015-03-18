@@ -3,9 +3,9 @@
   "use strict";
 
 
-var Screenrocket, Screenshotter;
+var Screenrocket;
 
-Screenshotter = (function() {
+Screenrocket = (function() {
   var defaults;
 
   defaults = {
@@ -13,7 +13,7 @@ Screenshotter = (function() {
     endpoint: 'http://screenshotter-lambda.herokuapp.com/screenshots/create'
   };
 
-  function Screenshotter(options) {
+  function Screenrocket(options) {
     if (options == null) {
       options = {};
     }
@@ -23,7 +23,7 @@ Screenshotter = (function() {
     }
   }
 
-  Screenshotter.prototype.render = function(options) {
+  Screenrocket.prototype.render = function(options) {
     if (options == null) {
       options = {};
     }
@@ -41,15 +41,11 @@ Screenshotter = (function() {
     });
   };
 
-  return Screenshotter;
+  return Screenrocket;
 
 })();
 
-Screenrocket = function(options) {
-  return new Screenshotter(options);
-};
-
-Screenrocket.VERSION = '0.0.1';
+Screenrocket.VERSION = '0.0.2';
 
 root.Screenrocket = Screenrocket;
 

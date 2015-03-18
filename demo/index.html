@@ -31,7 +31,7 @@
       $('#demo-button').click(function(e) {
         e.preventDefault();
 
-        var screenrocket = Screenrocket({ apiKey: 'YOUR_API_KEY' });
+        var screenrocket = new Screenrocket({ apiKey: 'YOUR_API_KEY' });
 
         screenrocket.render({ url: 'https://www.google.com' }).done(function(data) {
           $('#demo-output').append('<img src="' + data.url + '">')
