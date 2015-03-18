@@ -5,7 +5,7 @@ test('the base function exists', function() {
 test('throws exception with no api key', function() {
   throws(
     function() {
-      Screenrocket();
+      new Screenrocket();
     }
   );
 });
